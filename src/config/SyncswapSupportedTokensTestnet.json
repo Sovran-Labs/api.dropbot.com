@@ -1,0 +1,16 @@
+[
+  {
+    "chainId": 280,
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "symbol": "ETH",
+    "name": "Ethereum"
+  },
+  {
+    "chainId": 280,
+    "address": "0x0faF6df7054946141266420b43783387A78d82A9",
+    "decimals": 6,
+    "symbol": "USDC",
+    "name": "USDC"
+  }
+]

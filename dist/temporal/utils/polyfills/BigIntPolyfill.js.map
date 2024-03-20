@@ -1,0 +1,1 @@
+{"version":3,"file":"BigIntPolyfill.js","sourceRoot":"","sources":["../../../../src/temporal/utils/polyfills/BigIntPolyfill.ts"],"names":[],"mappings":";AAAA,mBAAmB;AAClB,MAAM,CAAC,SAAiB,CAAC,MAAM,GAAG;IACjC,OAAO,IAAI,CAAC,QAAQ,EAAE,CAAC;AACzB,CAAC,CAAC"}

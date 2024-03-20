@@ -1,0 +1,1 @@
+{"version":3,"file":"flow.interface.d.ts","sourceRoot":"","sources":["../../../../../src/server/models/wallets/flow/flow.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,SAAS,CAAC;AAC/B,OAAO,EAAE,OAAO,EAAE,MAAM,yBAAyB,CAAC;AAElD,MAAM,WAAW,KAAK;IACpB,GAAG,CAAC,EAAE,IAAI,CAAC;IACX,MAAM,EAAE,OAAO,CAAC;CACjB"}

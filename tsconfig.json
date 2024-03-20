@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "version": "4.4.2",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+    },
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/scripts/**/*.ts", "src/config/ActionSequences/as7b.ts.bk",
+  ],
+  "exclude": ["node_modules", "src/scripts"]
+}

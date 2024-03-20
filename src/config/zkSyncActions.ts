@@ -1,0 +1,3 @@
+export enum ZkSyncActions {
+  ZKSYNC_ORBITER_BRIDGE = 'ZKSYNC_ORBITER_BRIDGE',
+}

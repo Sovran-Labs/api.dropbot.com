@@ -1,0 +1,1 @@
+{"version":3,"file":"cycle.interface.d.ts","sourceRoot":"","sources":["../../../../../../src/server/models/wallets/flow/cycle/cycle.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,SAAS,CAAC;AAC/B,OAAO,EAAE,eAAe,EAAE,MAAM,8CAA8C,CAAC;AAE/E,MAAM,WAAW,MAAM;IACnB,GAAG,CAAC,EAAE,IAAI,CAAC;IACX,SAAS,EAAE,eAAe,EAAE,CAAC;CAChC"}

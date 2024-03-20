@@ -1,0 +1,16 @@
+curl 'https://trial-api.drop-bot.com/startFlow' \
+  -H 'authority: trial-api.drop-bot.com' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,es;q=0.8' \
+  -H 'content-type: application/json' \
+  -H 'origin: https://trial.drop-bot.com' \
+  -H 'referer: https://trial.drop-bot.com/' \
+  -H 'sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36' \
+  --data-raw '{"flowId":"65dc300453ec33119c18f2bf"}' \
+  --compressed

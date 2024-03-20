@@ -1,0 +1,1 @@
+{"version":3,"file":"user.model.d.ts","sourceRoot":"","sources":["../../../../src/server/models/user/user.model.ts"],"names":[],"mappings":"AAAA,OAAO,QAA8B,MAAM,UAAU,CAAC;AACtD,OAAO,EAAE,QAAQ,EAAE,KAAK,EAAE,MAAM,kBAAkB,CAAC;AAEnD,QAAA,MAAM,aAAa;;;;EAIjB,CAAC;AAgBH,QAAA,MAAM,SAAS;;OAAuD,CAAC;AAEvE,OAAO,EAAE,aAAa,EAAE,SAAS,EAAE,CAAC"}

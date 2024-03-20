@@ -1,0 +1,1 @@
+{"version":3,"file":"error.d.ts","sourceRoot":"","sources":["../../../src/server/middleware/error.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAC1D,OAAO,aAAa,MAAM,4BAA4B,CAAC;AAEvD,iBAAS,eAAe,CAAC,KAAK,EAAE,aAAa,EAAE,OAAO,EAAE,OAAO,EAAE,QAAQ,EAAE,QAAQ,EAAE,IAAI,EAAE,YAAY,QAqBtG;AAED,eAAe,eAAe,CAAC"}

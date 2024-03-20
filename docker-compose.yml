@@ -1,0 +1,124 @@
+services:
+  api:
+      build:
+        dockerfile: ./Dockerfile.api
+      container_name: api.dropbot.com
+      environment:
+        - PORT=4000
+        - NODE_ENV=development
+        - MONGODB_URL=mongodb://dropbot-mongodb:27017
+        - TEMPORAL_ADDRESS=temporal:7233
+      networks:
+        - mongo-network
+        - temporal-network
+        - bot-api-network
+      ports:
+        - 4000:4000
+  worker:
+      build:
+        dockerfile: ./Dockerfile.worker
+      depends_on:
+        - temporal
+      environment:
+        - MONGODB_URL=mongodb://dropbot-mongodb:27017
+        - ADDRESS=
+        - MNEMONIC=""
+        - COINMARKETCAP_API_KEY=
+        - DROPBOT_API_URL=http://api:4000
+        - TEMPORAL_ADDRESS=temporal:7233
+        - TEST_ACCOUNT_PK=
+        - ARBITRUM_SEPOLIA_RPC_PROVIDER=
+        - ARBITRUM_RPC_PROVIDER=
+        - ETHEREUM_SEPOLIA_RPC_PROVIDER=
+        - ETHEREUM_RPC_PROVIDER=
+        - POLYGON_RPC_PROVIDER=
+        - POLYGON_MUMBAI_RPC_PROVIDER=
+        - ZKSYNC_RPC_PROVIDER=
+        - ZKSYNC_SEPOLIA_RPC_PROVIDER=https://sepolia.era.zksync.dev
+        - POLYGON_ZKEVM_TESTNET_RPC_PROVIDER=https://rpc.public.zkevm-test.net
+        - ZKSYNC_GOERLI_RPC_PROVIDER=https://testnet.era.zksync.dev
+      networks:
+        - mongo-network
+        - temporal-network
+        - bot-api-network
+  
+  postgresql:
+    container_name: temporal-postgresql
+    environment:
+      POSTGRES_PASSWORD: temporal
+      POSTGRES_USER: temporal
+    image: postgres:${POSTGRESQL_VERSION}
+    networks:
+      - temporal-network
+    ports:
+      - 5432:5432
+    volumes:
+      - /var/lib/postgresql/data
+  temporal:
+    container_name: temporal
+    depends_on:
+      - postgresql
+    environment:
+      - DB=postgresql
+      - DB_PORT=5432
+      - POSTGRES_USER=temporal
+      - POSTGRES_PWD=temporal
+      - POSTGRES_SEEDS=postgresql
+      - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml
+    image: temporalio/auto-setup:${TEMPORAL_VERSION}
+    networks:
+      - temporal-network
+    ports:
+      - 7233:7233
+    volumes:
+      - ./dynamicconfig:/etc/temporal/config/dynamicconfig
+    labels:
+      kompose.volume.type: configMap
+  temporal-admin-tools:
+    container_name: temporal-admin-tools
+    depends_on:
+      - temporal
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CLI_ADDRESS=temporal:7233
+    image: temporalio/admin-tools:${TEMPORAL_VERSION}
+    networks:
+      - temporal-network
+    stdin_open: true
+    tty: true
+  temporal-ui:
+    container_name: temporal-ui
+    depends_on:
+      - temporal
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      # - TEMPORAL_CORS_ORIGINS=http://localhost:3000
+    image: temporalio/ui:${TEMPORAL_UI_VERSION}
+    networks:
+      - temporal-network
+    ports:
+      - 8233:8080
+
+  mongodb_container:
+    image: mongo:latest
+    container_name: dropbot-mongodb
+    ports:
+      - 27017:27017
+    networks:
+      - mongo-network
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  mongodb_data_container:
+
+networks: 
+  temporal-network:
+    driver: bridge
+    name: temporal-network
+  mongo-network:
+    driver: bridge
+    name: mongo-network
+  bot-api-network:
+    driver: bridge
+    name: bot-api-network

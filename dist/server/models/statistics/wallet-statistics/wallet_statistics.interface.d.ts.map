@@ -1,0 +1,1 @@
+{"version":3,"file":"wallet_statistics.interface.d.ts","sourceRoot":"","sources":["../../../../../src/server/models/statistics/wallet-statistics/wallet_statistics.interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,cAAc;IAC3B,SAAS,EAAE,MAAM,CAAC;IAClB,UAAU,EAAE,MAAM,CAAC;CACtB;AACD,MAAM,WAAW,iBAAiB;IAC9B,aAAa,EAAE,cAAc,CAAC;CACjC"}

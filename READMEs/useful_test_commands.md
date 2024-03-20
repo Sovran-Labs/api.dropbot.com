@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST http://localhost:3000/createFlow -d '{"actionSequenceId":"as3","globalState": {"account": "","balances":{"POLYGON_MUMBAI":{"MATIC":"1956325594959617664"}}},"description":"Orbiter Bridge testing at 6:05pm EST"}'

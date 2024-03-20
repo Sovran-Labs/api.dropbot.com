@@ -1,0 +1,5 @@
+import { WorkFlowReport, IAction } from '../../src/ts/interfaces';
+import * as activities from './activities';
+export declare const POLYGON_MUMBAI_preCheck: typeof activities.POLYGON_MUMBAI_preCheck, POLYGON_MUMBAI_wrapIn: typeof activities.POLYGON_MUMBAI_wrapIn, POLYGON_MUMBAI_postWrapInCheck: typeof activities.POLYGON_MUMBAI_postWrapInCheck, POLYGON_MUMBAI_wrapOut: typeof activities.POLYGON_MUMBAI_wrapOut, POLYGON_MUMBAI_awaitBlocks: typeof activities.POLYGON_MUMBAI_awaitBlocks, GENERAL_wait: typeof activities.GENERAL_wait, GENERAL_orbiterBridge: typeof activities.GENERAL_orbiterBridge, GENERAL_buildDependencies: typeof activities.GENERAL_buildDependencies;
+export declare function routeWorkFlow(flowId: string, actionSequence: IAction[]): Promise<WorkFlowReport | undefined>;
+//# sourceMappingURL=workflows.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"HttpException.d.ts","sourceRoot":"","sources":["../../../../src/server/middleware/exceptions/HttpException.ts"],"names":[],"mappings":"AAAA,cAAM,aAAc,SAAQ,KAAK;IAC/B,MAAM,EAAE,MAAM,CAAC;IACf,OAAO,EAAE,MAAM,CAAC;gBAEJ,MAAM,EAAE,MAAM,EAAE,OAAO,EAAE,MAAM;CAK5C;AAED,eAAe,aAAa,CAAC"}

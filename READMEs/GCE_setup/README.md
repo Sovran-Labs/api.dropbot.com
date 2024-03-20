@@ -1,0 +1,4 @@
+- ssh-keygen -t ed25519 -C "tad@cmdlabs.io"
+- named it `db_id_ed25519.pub`
+- cat `db_id_ed25519.pub`
+- ssh -i ~/.ssh/db_id_ed25519 tad@35.202.18.99

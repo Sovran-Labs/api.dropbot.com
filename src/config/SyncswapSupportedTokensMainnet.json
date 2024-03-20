@@ -1,0 +1,30 @@
+[
+  {
+    "chainId": 324,
+    "address": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+    "decimals": 6,
+    "symbol": "USDC",
+    "name": "USDC"
+  },
+  {
+    "chainId": 324,
+    "address": "0x770E221EC6F3e8A2E2E168399bb3aa56a63E397d",
+    "decimals": 18,
+    "symbol": "zkSyncMATIC",
+    "name": "zkSyncMATIC"
+  },
+  {
+    "chainId": 324,
+    "address": "0x082faDe8b84B18C441d506e1D3a43a387Cc59D20",
+    "decimals": 18,
+    "symbol": "zkSyncLINK",
+    "name": "zkSyncLINK"
+  },
+  {
+    "chainId": 324,
+    "address": "0x0000000000000000000000000000000000000000",
+    "decimals": 18,
+    "symbol": "ETH",
+    "name": "Ethereum"
+  }
+]
